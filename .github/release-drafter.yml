@@ -1,0 +1,15 @@
+version-resolver:
+  major:
+    labels:
+      - 'actions/major'
+  minor:
+    labels:
+      - 'actions/minor'
+  patch:
+    labels:
+      - 'actions/patch'
+  default: patch
+include-labels:
+  - 'actions/major'
+  - 'actions/minor'
+  - 'actions/patch'
