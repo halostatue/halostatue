@@ -4,6 +4,14 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    ignore:
+        - dependency-name: '*'
+          update-types: [version-update:semver-major]
+    commit-message:
+      prefix: 'fix(deps): '
+    labels:
+      - actions/patch
+      - github_actions
     groups:
       fish-shop:
         applies-to: version-updates
@@ -13,3 +21,6 @@ updates:
           - fish-shop/install-plugin
           - fish-shop/run-fishtape-tests
           - fish-shop/syntax-check
+        update-types:
+          - minor
+          - patch
